@@ -1,0 +1,141 @@
+/* -----------------------------------
+   Import Google Fonts
+----------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* -----------------------------------
+   Branding Colours
+----------------------------------- */
+:root {
+    /* Digital Preservation Palette */
+    --dps-black: #32322F;
+    --dps-teal: #154a4a;
+    --dps-blue: #4FA6A3;;
+    --dps-gold: #D6AB00;
+    --dps-green: #2F8F75;
+    --dps-coral: #F37D53;
+    --dps-red: #B3021A;
+
+    --dps-light: #FBFAFA;
+    --dps-grey: #B7B6B3;
+}
+
+/* -----------------------------------
+   Global Page Styling
+----------------------------------- */
+body {
+  font-family: 'Montserrat', sans-serif !important;
+  background-color: var(--dps-light);
+  color: var(--dps-black) !important;
+  font-size: 18px;
+}
+
+.navbar {
+  background-color: var(--dps-light) !important;
+  box-shadow: none;
+  border-bottom: solid 4px var(--dps-gold);
+}
+
+.navbar-brand {
+  color: var(--dps-black) !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.nav-link {
+  color: var(--dps-black) !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+/* -----------------------------------
+   Dashboard Container
+----------------------------------- */
+
+/* .dashboard-container {
+  padding: 25px;
+} */
+
+/* -----------------------------------
+   Headers
+----------------------------------- */
+
+h1,
+h2,
+h3 {
+  color: var(--dps-black);
+  font-family: 'Ubuntu', sans-serif
+}
+
+h1 {
+  font-weight: "700" !important
+}
+
+/* -----------------------------------
+  Footer
+----------------------------------- */
+.footer {
+  background-color: var(--dps-black) !important;
+  color: var(--dps-light) !important;
+}
+
+.text-muted {
+  color: var(--dps-light) !important;
+}
+
+/* -----------------------------------
+   Cards
+----------------------------------- */
+
+.card {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12);
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.card-header {
+  font-weight: bold;
+  background-color: var(--dps-teal);
+  color: var(--dps-light);
+}
+
+.card P {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--dps-black);
+}
+
+.backlog .card-header {
+  background-color: var(--dps-black);
+}
+
+
+/* -----------------------------------
+   Navigation Bar
+----------------------------------- */
+.navbar {
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* -----------------------------------
+   Graph Containers
+----------------------------------- */
+.dash-graph {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* -----------------------------------
+   Tables
+----------------------------------- */
+
+.dash-table-container {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.dash-spreadsheet-container {
+  border-radius: 10px;
+}
