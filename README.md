@@ -43,7 +43,42 @@ To launch the app, ensure that the environment is active, then use
 python3 app.py
 ```
 The app will launch in the terminal. When launched, navigate to `http://127.0.0.1:8050/` to see the site.
-
+```
+pres_res_dashboard/
+├── assets
+│   └── style.css
+├── callbacks
+|   ├── appraisal_callbacks.py
+|   ├── preservation_callbacks.py
+│   └── processing_callbacks.py
+├── components
+|   ├── appraisal_tabs
+|   ├── dataset_metrics_tabs
+|   ├── format_tabs
+|   ├── processing_storage_tabs
+|   ├── cards.py
+|   ├── charts.py
+|   ├── footer.py
+|   ├── tables.py
+│   └── tabs.py
+├── data
+│   └── Format - CRDC Mapping - Cross Tab.csv
+├── pages
+|   ├── appraisal_dashboard.py
+|   ├── dataset_metrics_dashboard.py
+|   ├── format_dashboard.py
+|   ├── home.py
+|   ├── metrics_info.py
+│   └── processing_dashboard.py
+├── utils
+|   ├── calculations.py
+|   ├── config_dashboard.py
+│   └── data_loader.py
+├── app.py
+├── environment.yml
+├── LICENSE
+└── README.md
+```
 ![Dashboard Home Page](./assets/Screenshot%202026-08-10%20at%2020.12.05.png)
 
 ---
