@@ -69,15 +69,16 @@ layout = dbc.Container(
         # KPI ROW
         dbc.Row(
             [
-                html.P("Last updated: 2026-08-04 | Next update: 2026-10-06", className="mb-4"),
+                html.P("Last updated: 2026-08-20 | Next update: 2026-10-06", className="mb-4"),
                 html.H2("Highlights"),
+                
             ]
         ),
         dbc.Row(
             [
                 dbc.Col(
                     create_kpi_card(
-                        "Total Datasets Completed", metrics["total_completed"]
+                        "Total Datasets Reviewed", metrics["total_completed"]
                     ),
                     width=3,
                 ),
@@ -89,19 +90,26 @@ layout = dbc.Container(
                 ),
                 dbc.Col(create_kpi_card("Total AIPs", metrics["total_aips"]), width=3),
                 dbc.Col(
-                    create_kpi_card("Total Storage", f'{metrics["total_storage"]} TB'),
+                    create_kpi_card("Total Storage (SciNet)", f'{metrics["total_storage"]} TB'),
                     width=3,
                 ),
             ],
             className="mb-4",
         ),
+         dbc.Row(
+            [
+                html.P(["For more information about what each card is calculating visit the ",    html.A("metrics info page", href="http://127.0.0.1:8050/metrics-info", target="_blank"), "." ],
+                       className="mb-4"),
+                
+            ]
+          ),
         # CHART ROW 1
         dbc.Row(
             [
-                dbc.Col(
-                    html.H3("Risk Overview"),
-                    width=12,
-                ),
+             html.H3("Risk Overview"),
+             html.P("The Risk Overview section provides a breakdown of the formats that are low, moderate, and high risk. It also provides a breakdown of the preservation levels (Basic, Watch, Full), for each format in the Digital Preservation Action Plan.")
+                   
+              
             ]
         ),
         dbc.Row(
@@ -132,11 +140,9 @@ layout = dbc.Container(
             className="mb-4",
         ),
         dbc.Row(
-            [
-                dbc.Col(
-                    html.H3("Preservation Recommendations"),
-                    width=12,
-                ),
+          [
+            html.H3("Preservation Recommendations"),
+            html.P("The Preservation Recommendation is calculated from the Appraisal Score and Cost Index Score that is produced using the Appraisal Matrix."),     
             ]
         ),
         dbc.Row(

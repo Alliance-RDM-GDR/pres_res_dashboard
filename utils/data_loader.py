@@ -18,6 +18,7 @@ SHEET_TABS = {
     "format_calc": "899935805",
     "dataset_metrics": "426469201",
     "size_range": "1248493435",
+    "collection_stats": "365592660"
 }
 
 def load_sheet(tab_name):
@@ -326,4 +327,20 @@ def load_dataset_size_data():
         labels=labels,
         right=False
     )    
+    return df
+
+# ---------------------------------------------------
+# Collection Stats
+# ---------------------------------------------------
+def load_collection_stats_data():
+
+    df = load_sheet("collection_stats")
+
+    return df
+# ---------------------------------------------------
+# CRDC - Format Mapping Stats
+# ---------------------------------------------------
+def load_crdc_format_stats_data():
+    df = pd.read_csv("data/Format - CRDC Mapping - Cross Tab.csv")
+
     return df

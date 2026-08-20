@@ -24,9 +24,10 @@ def layout(df, status_df):
             [
               html.H2(
                   "Processing and Status Overview",
-              ),
+              ), html.P("""The line graph provides information about the rate of transfers of datasets to DPS. The status overview provides a breakdown of how many datasets are in each FPRES Jira Board status."""),
+             
             ],
-          className="mb-4"
+          className="mb-2"
         ),
        dbc.Row(
         [                   

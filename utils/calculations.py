@@ -98,12 +98,12 @@ def calculate_appraisal_metrics(df):
 
     total_accepted = (
         appraisal_accept
-        + reappraisal_accept
+        # + reappraisal_accept
     )
 
     total_rejected = (
         appraisal_reject
-        + reappraisal_reject
+        # + reappraisal_reject
     )
 
     acceptance_rate = (
@@ -176,19 +176,19 @@ def calculate_preservation_question_metrics(df, year):
         ),
 
         "yes_percent": display_value(
-            selected["Yes"]
+            selected["Yes_%"]
         ),
 
         "no_percent": display_value(
-            selected["No"]
+            selected["No_%"]
         ),
 
         "unsure_percent": display_value(
-            selected["Unsure"]
+            selected["Unsure_%"]
         ),
 
         "no_response_percent": display_value(
-            selected["No_Response"]
+            selected["No_Response_%"]
         ),
     }
 # ---------------------------------------------------

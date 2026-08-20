@@ -89,7 +89,11 @@ def layout(geo_df, size_range_df):
               dbc.Row([
                 dbc.Col(create_kpi_card("Total Versioned Datasets", geo_df["versioned"]), width=12,className="mb-4"),
                 ]),
+                dbc.Row([
+                                dbc.Col(create_kpi_card("Total Collections", geo_df["total_collections"]), width=12,className="mb-4"),
+                                ]),
               ], width=4),
+              
 
             dbc.Col(
               dbc.Card (

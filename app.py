@@ -52,6 +52,9 @@ formats_page = "Formats"
 # Research Metrics is a direct navbar link
 dataset_metrics_page = "Dataset Metrics"
 
+# Metrics Info is a direct navbar link
+metrics_info_page = "Metrics Info"
+
 
 # ===================================================
 # Get Registered Pages
@@ -172,8 +175,8 @@ if appraisal_page:
         )
     )
 
-    processing_storage_page = pages.get(
-    processing_storage_page
+processing_storage_page = pages.get(
+processing_storage_page
 )
 
 if processing_storage_page:
@@ -232,6 +235,21 @@ if dataset_metrics_page:
             dbc.NavLink(
                 "Dataset Metrics",
                 href=dataset_metrics_page["path"],
+            )
+        )
+    )
+
+metrics_info_page = pages.get(
+    metrics_info_page
+)
+
+if metrics_info_page:
+
+    nav_items.append(
+        dbc.NavItem(
+            dbc.NavLink(
+                "Metrics Info",
+                href=metrics_info_page["path"],
             )
         )
     )

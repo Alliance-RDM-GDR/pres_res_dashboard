@@ -1,7 +1,6 @@
 import dash_bootstrap_components as dbc
 from dash import html, dcc
 
-from components.cards import create_kpi_card
 from components.tables import create_data_table
 
 # ---------------------------------------------------

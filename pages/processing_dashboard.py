@@ -2,7 +2,7 @@ import dash
 from dash import html, callback, Output, Input
 import dash_bootstrap_components as dbc
 
-from utils.data_loader import load_processing_storage, load_status_backlog_data, load_dataset_size_data
+from utils.data_loader import load_processing_storage, load_status_backlog_data, load_dataset_size_data, load_collection_stats_data
 
 from utils.calculations import processing_metrics
 
@@ -10,6 +10,7 @@ from components.processing_storage_tabs import (
     overview,
     processing,
     storage,
+    collections,
 )
 
 # ---------------------------------------------------
@@ -26,6 +27,7 @@ dash.register_page(
 # ---------------------------------------------------
 df = load_processing_storage()
 status_df = load_status_backlog_data()
+collection_df = load_collection_stats_data()
 
 metrics = processing_metrics(df)
 size_range_df = load_dataset_size_data()
@@ -37,6 +39,7 @@ PROCESSING_TABS = [
     {"label": "Overview", "value": "overview"},
     {"label": "Processing", "value": "processing"},
     {"label": "Storage", "value": "storage"},
+    {"label": "Collections", "value": "collections"},
 ]
 
 # ---------------------------------------------------
@@ -100,3 +103,6 @@ def render_processing_tab(active_tab):
 
     elif active_tab == "storage":
         return storage.layout(df, metrics)
+
+    elif active_tab == "collections":
+        return collections.layout(collection_df)

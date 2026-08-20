@@ -20,7 +20,7 @@ def layout(appraisal_metrics, appraisal_trend_df):
 
                 html.P(
                   """
-                  The Appraisal Dashboard includes information about the total datasets appraised. It breaks the information down by year into accepted and rejected for long-term preservation. The same information is now available for reappraisal decisions. The Preservation Question tab, outlines the responses provided by researchers when answering the long-term preservation question during the deposit process.
+                  The appraisal overview includes information about the total datasets reviewed, accepted and rejected for long-term presrvation. It also provides an overview of the acceptance rate and appraisal trends since 2020.
                   """
                 ),
             ]

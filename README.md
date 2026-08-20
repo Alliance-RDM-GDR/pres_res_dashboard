@@ -2,7 +2,7 @@
 The code in this repository is used to create the DPS Analytics Dashboard and uses Dash, Plotly and Pandas.
 
 ## Prerequisites
-The scripts developed for format work were developed using `miniforge`, and `conda-forge`. This dashboard is developed with python.
+The dashboard was developed using `miniforge`, and `conda-forge`. This dashboard is developed with python.
 
 ## Installation
 * Navigate to the [conda-forge](https://conda-forge.org/download/) website to download the installer.
@@ -11,11 +11,12 @@ The scripts developed for format work were developed using `miniforge`, and `con
   bash Miniforge3-$(uname)-$(uname -m).sh
   ``` 
 ### Installing Packages
-Install packages and create an environment with the [environment.yml](https://drive.google.com/file/d/1qa0S5UXKgzFx4F6LTPugD58Dar33baQ7/view?usp=drive_link) file
+Install packages and create an environment with the environment.yml file found in the repository.
 
-1. Download `yml` file
-2. Run the follow
-  
+1. `git clone <name-of-repository>`
+2. `cd` into clone repository
+3. Run the script below:
+
 ```
 conda env create -n <my_env_name> -f /path/to/environment.yml 
 ```

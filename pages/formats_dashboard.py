@@ -2,7 +2,7 @@ import dash
 from dash import html, callback, Output, Input
 import dash_bootstrap_components as dbc
 
-from utils.data_loader import load_format_level_data, load_format_id_data
+from utils.data_loader import load_format_level_data, load_format_id_data, load_crdc_format_stats_data
 
 from utils.calculations import (
     risk_levels,
@@ -12,6 +12,7 @@ from utils.calculations import (
 from components.formats_tabs import (
     overview,
     levels,
+    mapping,
 )
 
 # ---------------------------------------------------
@@ -27,6 +28,7 @@ id_df = load_format_id_data()
 
 risk_counts = risk_levels(df)
 preservation_counts = preservation_levels(df)
+mapping_df = load_crdc_format_stats_data()
 
 # ---------------------------------------------------
 # Tab Definitions
@@ -34,6 +36,7 @@ preservation_counts = preservation_levels(df)
 FORMAT_TABS = [
     {"label": "Overview", "value": "overview"},
     {"label": "Format Levels", "value": "levels"},
+    {"label": "Mapping", "value": "mapping"},
 ]
 # ---------------------------------------------------
 # Page Layout
@@ -81,3 +84,7 @@ def render_formats_tab(active_tab):
     return levels.layout(
       df
     )
+  elif active_tab == "mapping":
+      return mapping.layout(
+        mapping_df
+      )

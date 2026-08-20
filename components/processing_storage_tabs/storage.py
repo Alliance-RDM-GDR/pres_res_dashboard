@@ -26,14 +26,15 @@ def layout(df, metrics):
     return dbc.Container(
         [
            dbc.Row(
-                   [
-                       html.H2(
-                           "Storage and AIPs Overview",
-                           className="mb-4"
-                       ),
-           
-                   ]
-               ), 
+            [
+              html.H2(
+                  "Storage and AIPs Overview",
+                  className="mb-4"
+              ),
+              html.P("The graphs provide storage and AIP creation trends. The KPI cards provide information related to the percentage of AIPs created in relation to the total number of published datasets. The storage KPI cards provides the total storage used against the total storage allocation at SciNet (500 TB).")
+  
+            ]
+          ), 
 
           dbc.Row(
             [

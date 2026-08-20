@@ -6,16 +6,17 @@ from components.charts import create_ranking_chart
 # Format Levels Layout
 # ---------------------------------------------------
 def layout(id_df):
+  
   id_fig = create_ranking_chart(
     id_df,
-    "format",
-    "total",
+    "formats_frdr",
+    "total_frdr",
     "Top 20 Formats in FRDR",
     limit=20
   )
   borealis_fig = create_ranking_chart(
       id_df,
-      "format_borealis",
+      "formats_borealis",
       "total_borealis",
       "Top 20 Formats in Borealis",
       limit=20
@@ -33,7 +34,7 @@ def layout(id_df):
 
                 html.P(
                   """
-                  This tab provides an overview of the top 20 formats found in the Federated Research Data Repository (FRDR).
+                  This tab provides an overview of the top 20 formats found in the Federated Research Data Repository (FRDR) and Borealis.
                   """
                 ),
             ]

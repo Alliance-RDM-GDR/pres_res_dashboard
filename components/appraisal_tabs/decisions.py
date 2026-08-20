@@ -2,8 +2,7 @@ import dash_bootstrap_components as dbc
 from dash import html, dcc
 
 from components.charts import create_stacked_bar, create_donut_chart
-# from utils.calculations import get_recommendation_kpis
-# from components.cards import create_kpi_card
+
 
 # ---------------------------------------------------
 # Appraisal & Reappraisal Tab Layout
@@ -56,7 +55,6 @@ def layout(
                     html.P(
                       """
                       “Appraisal for preservation is the process of determining whether a dataset has sufficient long-term archival value to merit the work of monitoring, managing, storing and sustaining access to that data, as well as related systems and workflows, persistently over time.”
-                      Reappraisal of research data occurs after a retention period is complete. It is used to determine if the data should be kept for a longer period of time.
                       """
                     ),
 
@@ -69,6 +67,7 @@ def layout(
                     ),
                 ]
             ),
+           
             dbc.Row(
                 [                  
                   dbc.Col(
@@ -93,6 +92,15 @@ def layout(
                 ),  
               ],
               className="mb-4",
+            ),
+             dbc.Row ([
+                html.H2(
+                  "Appraisal Matrix Breakdown",
+              ),
+              html.P(
+                "The appraisal matrix breakdown includes information about the appraisal score distribution and the cost index distribution."
+              ),
+            ],className="mb-2"
             ),
              dbc.Row(
               [                  

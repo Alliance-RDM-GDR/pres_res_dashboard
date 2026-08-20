@@ -43,9 +43,9 @@ def layout(processing_df, size_range_df):
             html.P(
                 """
                 This dashboard provides an overview of annual
-                dataset processing activity, including AIPs,
+                dataset processing activity, including AIPs generated,
                 datasets processed, datasets reprocessed,
-                and datasets completed.
+                and datasets reviewed.
                 """
             ),
         ]

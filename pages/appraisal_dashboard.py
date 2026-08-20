@@ -4,7 +4,6 @@ import dash_bootstrap_components as dbc
 
 from utils.data_loader import (
     load_appraisal_data,
-    # load_appraisal_form_data,
     load_pres_question_data,
     reshape_appraisal_data,
     get_decision_data   
@@ -31,7 +30,6 @@ dash.register_page(__name__, path="/appraisal", name="Appraisal")
 # ---------------------------------------------------
 appraisal_df = load_appraisal_data()
 pres_df = load_pres_question_data()
-# form_df = load_appraisal_form_data()
 
 # Create chart-ready dataframe
 df_long = reshape_appraisal_data(appraisal_df)
@@ -69,7 +67,7 @@ APPRAISAL_TABS = [
 layout = dbc.Container(
     [
         # Page Header
-        html.H1("Appraisal Dashboard", className="mb-3"),
+        html.H1("Appraisal & Reappraisal Dashboard", className="mb-3"),
         # Tabs
         dbc.Tabs(
             [

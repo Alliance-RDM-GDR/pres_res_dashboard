@@ -19,16 +19,13 @@ def layout(pres_df):
 
                   html.P(
                     """
-                    “Appraisal for preservation is the process of determining whether a dataset has sufficient long-term archival value to merit the work of monitoring, managing, storing and sustaining access to that data, as well as related systems and workflows, persistently over time.”
-                    Reappraisal of research data occurs after a retention period is complete. It is used to determine if the data should be kept for a longer period of time.
+                    All datasets submitted to FRDR will be publicly available for at least 10 years. Some datasets with long-term value (more than 10 years) will be preserved for long-term access. If you think your dataset should be retained for the long-term, you are welcome to participate in the appraisal process. Please leave a comment here indicating, for example, potential ongoing social, scientific, or historical value.
                     """
                   ),
 
                   html.P(
                       """
-                      Reappraisal occurs after a retention period
-                      to determine whether data should continue
-                      to be kept.
+                      Do you intend for this dataset to be preserved longer than 10 years?
                       """
                   ),
               ]
@@ -79,7 +76,7 @@ def layout(pres_df):
 
                 dbc.Col(
                     create_kpi_card(
-                        "Yes %",
+                        "Yes",
                         html.Span(id="pq-yes-percent")
                     ),
                     width=2
@@ -87,7 +84,7 @@ def layout(pres_df):
 
                 dbc.Col(
                     create_kpi_card(
-                        "No %",
+                        "No",
                         html.Span(id="pq-no-percent")
                     ),
                     width=2
@@ -95,7 +92,7 @@ def layout(pres_df):
 
                 dbc.Col(
                     create_kpi_card(
-                        "Unsure %",
+                        "Unsure",
                         html.Span(id="pq-unsure-percent")
                     ),
                     width=2
@@ -103,7 +100,7 @@ def layout(pres_df):
 
                 dbc.Col(
                     create_kpi_card(
-                        "No Response %",
+                        "No Response",
                         html.Span(id="pq-no-response-percent")
                     ),
                     width=2
